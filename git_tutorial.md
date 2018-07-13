@@ -48,6 +48,33 @@ If you're familiar with these tools, then you probably already have a favorite; 
 git config --global core.editor nano
 ```
 
+#Get acquainted with Github
+Github provides a few important functions beyond what you can accomplish with git alone.
+Most importantly, it allows you to back up and share repositories with collaborators.
+It also provides an environment where you can view the contents of repositories, albeit with some limitations.
+
+For the moment, we will just focus on getting logged in to github.gatech.edu and understanding where you can find and view repositories.
+
+Open your web browser and navigate to ```github.gatech.edu```.
+If you are not already logged in, you will need to login with your Georgia Tech username and password.
+(Yes, the login prompt looks different than the single sign-on prompts you are used to seeing. It's still legitimate; I promise.)
+
+After logging in, github will probably offer you tutorial (which you can ignore/close), and it will bring you to your personal newsfeed (which is probably empty).
+On the right-hand side of your homepage, you will see a list of your repositories and repositories where you are collaborator.
+Clicking on any one of these repositories will bring you to a page showing the contents of the repository, and you can navigate through this view like you would any file explorer.
+Most source files can be viewed inside of github by clicking on them.
+
+At any time, you can click on the github icon in the upper left corner of the screen to return to your newsfeed.
+You can also open a navigation menu by clicking on your profile picture in the upper right-hand corner.
+From that menu, you can explore your personal profile, including a list of all of your repositories.
+(Note that this list only contains repositories that you have created, not repositories where you are a collaborator.)
+
+Take a few minutes to try it out.
+Click on one of those repositories and see what it contains.
+If you do not currently have access to any repositories, you can always have a look at the one which contains this tutorial.
+This repository is public, so all you have to do is navigate to ```https://github.gatech.edu/akirkpatrick3/git-resources```.
+
+
 # Optional configuration: SSH keys
 **Note:  you must set up SSH keys in order to use git from inside the School of Math computer network.**
 Whenever you exchange information with github, you must authenticate your identity.
