@@ -33,8 +33,8 @@ This information will be included in every commit you make and is also used by g
 Since we are working with Georgia Tech Enterprise Github, you will want to use your `username@gatech.edu` email address.
 Open a terminal and enter
 ```
-git config --global user.name "Anna Kirkpatrick"
-git config --global user.email "akirkpatrick3@gatech.edu"
+git config --global user.name "First Last"
+git config --global user.email "FLast#@gatech.edu"
 ```
 substituting your own name and email address.
 (The `--global` option in these commands is global to the user, meaning that it applies to all of the repositories you might work with. 
@@ -48,5 +48,44 @@ If you're familiar with these tools, then you probably already have a favorite; 
 git config --global core.editor nano
 ```
 
-Git supports many other configuration options, but the above will be sufficient for most casual users.
+# Optional configuration: SSH keys
+**Note:  you must set up SSH keys in order to use git from inside the School of Math computer network.**
+Whenever you exchange information with github, you must authenticate your identity.
+With the newer versions of git, you can use a https protocol which allows you to authenticate using your github password (which, for Georgia Tech github, is your Georgia Tech password).
+For older versions of git, including the version currently running on School of Math machines, you must instead authenticate using SSH keys.
+(Newer versions of git can also be used with SSH keys, and some people choose to do so for convenience.
+Because SSH uses a public-private key pair, it is completely safe to use the same key to authenticate with multiple services, e.g. Georgia Tech's github.gatech.edu and the public-facing github.com.)
+
+First, you will need to generate an SSH key pair, unless you already have one.  
+If you're not sure whether or not you have generated a key previously, it is safe to just generate a new key.
+We will use the program ssh-keygen.
+```
+ssh-keygen
+```
+The program will prompt you to enter a file in which to save your new key.
+You can just press enter to accept the default location and file name.
+It will then prompt you twice for a passphrase.
+This is a password that you will need to type each time you want to use your SSH key.
+(Basically, it is a small encryption key that unlocks a big encryption key.)
+You can choose to leave the passphrase blank, but do know that this presents a small security risk, as anyone who gains access to your hard drive could then access anything protected by your SSH keys.
+
+When the program finishes, you will have a pair of files. 
+By default, these are `~/.ssh/id_rsa` (your private key) and `~./ssh/id_rsa.pub` (your public key).
+
+You now need to provide your public key to github so that you can use your private key to authenticate.
+Open web browser and navigate to `github.gatech.edu`. 
+(The same process applies for `github.com`.)
+Login if you have not already done so, and then click on the small profile picture icon in the upper right-hand corner of the screen.
+This click should open a menu.
+In that menu, click on Settings.
+This will bring you to a settings page.
+In the left hand menu, click on SSH and GPG keys.
+Then, click the green New SSH key button.
+
+You should now be looking at a form which asks you for a title and a key.
+For the title, you want to enter a brief description of the computer associated with the key (e.g. "School of Math Network", "Personal MacBook", "Ubuntu Desktop").
+For the key, open the file `~./ssh/id_rsa.pub` with a text editor, copy the entire contents of the file, and paste into the key field.
+Click "Add SSH key", and you're done.
+(Github may prompt you for your password to confirm this new key actually belongs to you.)
+
 
