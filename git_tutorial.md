@@ -48,7 +48,7 @@ If you're familiar with these tools, then you probably already have a favorite; 
 git config --global core.editor nano
 ```
 
-#Get acquainted with Github
+# Get acquainted with Github
 Github provides a few important functions beyond what you can accomplish with git alone.
 Most importantly, it allows you to back up and share repositories with collaborators.
 It also provides an environment where you can view the contents of repositories, albeit with some limitations.
@@ -115,8 +115,8 @@ For the key, open the file `~./ssh/id_rsa.pub` with a text editor, copy the enti
 Click "Add SSH key", and you're done.
 (Github may prompt you for your password to confirm this new key actually belongs to you.)
 
-#Getting copies of existing repositories: clone and pull
-#Getting a new repository: clone
+# Getting copies of existing repositories: clone and pull
+## Copying a repository: clone
 We have already seen that we can view existing repositories online through the github interface.
 Even if you are not contributing code to a project, it probably won't take long to discover the limitations of this approach.
 As soon as you want to download many files at once, use tools like grep, or view history in a sensible way, you will need to clone the repository.
@@ -144,7 +144,7 @@ When you click this button, a small box appears containing an address along with
 Note the small blue text that allows you to toggle between SSH and HTTPS addresses.
 (Remember: you must use SSH on School of Math computers.)
 
-#Updating a repository: pull
+## Updating a repository: pull
 Once you have used the `clone` command to create a copy of a repository, git provides an efficient way to update your local copy of the repository to reflect remote changes.
 
 In most cases, this is as simple as executing
@@ -159,6 +159,6 @@ Neither of these topics will be covered in depth in this tutorial.
 If you are not contributing code to the repository (and therefore have not made any commits to your local repository), then you should always be able to pull the latest changes without any conflicts.
 If you have made commits locally, then your commits could conflict with other commits made to the remote repository.
 In this case, manual merging of the relevant files will be required.
-Merging will be covered in a later section.
+Merging will be covered in a later section.&
 
 
