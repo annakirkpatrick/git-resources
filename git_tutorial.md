@@ -161,8 +161,8 @@ If you have made commits locally, then your commits could conflict with other co
 In this case, manual merging of the relevant files will be required.
 Merging will be covered in a later section.
 
-#Viewing history
-##Viewing the commit log
+# Viewing history
+## Viewing the commit log
 One very important function of git is to maintain a record of changes to your code, along with information about who modified it, at what time, for what purpose.
 Git maintains this history as a set of *commits*. 
 Each commit is a set of changes made by a single person to some files in the repository.
