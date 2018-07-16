@@ -115,4 +115,50 @@ For the key, open the file `~./ssh/id_rsa.pub` with a text editor, copy the enti
 Click "Add SSH key", and you're done.
 (Github may prompt you for your password to confirm this new key actually belongs to you.)
 
+#Getting copies of existing repositories: clone and pull
+#Getting a new repository: clone
+We have already seen that we can view existing repositories online through the github interface.
+Even if you are not contributing code to a project, it probably won't take long to discover the limitations of this approach.
+As soon as you want to download many files at once, use tools like grep, or view history in a sensible way, you will need to clone the repository.
+
+The command `git clone` creates a local copy of the repository you specify and sets up appropriate *remotes* so that you can easily download updates to the repository and make contributions to the repository (if you have permission).
+
+For example, if you wanted to clone the repository containing this tutorial, then run
+```
+git clone git@github.gatech.edu:akirkpatrick3/git-resources.git
+```
+if you have set up SSH keys. Otherwise, if you are using HTTPS, run
+```
+git clone https://github.gatech.edu/akirkpatrick3/git-resources.git
+```
+Either command will create a new directory called `git-resources` in your current working directory. 
+The directory `git-resources` will contain all of the files and directories in this repository, along with a hidden directory named `.git`. 
+This hidden directory holds all of the information about the repository, including all of the history information.
+You will most likely never need to even look inside of this directory, but you should know that it exists in case you ever need to move a repository manually (that is, putting it on physical media instead of using a service like Github).
+
+Great, so the command to download a repository for the first time is `git clone`, but how did I come up with the address?
+Well, I just asked Github, of course!
+When viewing any repository, make sure that you are on the *Code* tab, and look for a green button with the text *Clone or Download*.
+It should be towards the upper right-hand side of your screen.
+When you click this button, a small box appears containing an address along with a button to copy it to your clipboard.
+Note the small blue text that allows you to toggle between SSH and HTTPS addresses.
+(Remember: you must use SSH on School of Math computers.)
+
+#Updating a repository: pull
+Once you have used the `clone` command to create a copy of a repository, git provides an efficient way to update your local copy of the repository to reflect remote changes.
+
+In most cases, this is as simple as executing
+```
+git pull
+```
+with your working directory anywhere inside of the repository.
+
+Pulling becomes more complicated if you have set multiple *remotes* or are working with multiple *branches*.
+Neither of these topics will be covered in depth in this tutorial.
+
+If you are not contributing code to the repository (and therefore have not made any commits to your local repository), then you should always be able to pull the latest changes without any conflicts.
+If you have made commits locally, then your commits could conflict with other commits made to the remote repository.
+In this case, manual merging of the relevant files will be required.
+Merging will be covered in a later section.
+
 
