@@ -103,11 +103,9 @@ You now need to provide your public key to github so that you can use your priva
 Open web browser and navigate to `github.gatech.edu`. 
 (The same process applies for `github.com`.)
 Login if you have not already done so, and then click on the small profile picture icon in the upper right-hand corner of the screen.
-This click should open a menu.
-In that menu, click on Settings.
-This will bring you to a settings page.
-In the left hand menu, click on SSH and GPG keys.
-Then, click the green New SSH key button.
+In that menu, click on *Settings*.
+In the left hand menu, click on *SSH and GPG keys*.
+Then, click the green *New SSH key* button.
 
 You should now be looking at a form which asks you for a title and a key.
 For the title, you want to enter a brief description of the computer associated with the key (e.g. "School of Math Network", "Personal MacBook", "Ubuntu Desktop").
@@ -131,6 +129,7 @@ if you have set up SSH keys. Otherwise, if you are using HTTPS, run
 ```
 git clone https://github.gatech.edu/akirkpatrick3/git-resources.git
 ```
+(Unless the repository you're cloning is public, git will prompt you to authenticate with either your password or your SSH key and passphrase.)
 Either command will create a new directory called `git-resources` in your current working directory. 
 The directory `git-resources` will contain all of the files and directories in this repository, along with a hidden directory named `.git`. 
 This hidden directory holds all of the information about the repository, including all of the history information.
@@ -152,6 +151,7 @@ In most cases, this is as simple as executing
 git pull
 ```
 with your working directory anywhere inside of the repository.
+(As with `clone`, you will need to authenticate unless the repository is public.)
 
 Pulling becomes more complicated if you have set multiple *remotes* or are working with multiple *branches*.
 Neither of these topics will be covered in depth in this tutorial.
