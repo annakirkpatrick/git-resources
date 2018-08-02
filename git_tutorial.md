@@ -161,6 +161,15 @@ If you have made commits locally, then your commits could conflict with other co
 In this case, manual merging of the relevant files will be required.
 Merging will be covered in a later section.
 
+Note: if you are not attempting to contribute to the repository but have locally edited some files in the repository, you may get an error message when attempting to run `git pull`.
+As long as you do not want to keep your changes, you can easily reset the state of your working directory by running
+```
+git reset --hard
+```
+This command will undo all changes you have made to your local copy of the repository, so use with caution!
+After running reset, you should be able to run `git pull` without conflicts or errors.
+
+
 # Viewing history
 ## Viewing the commit log
 One very important function of git is to maintain a record of changes to your code, along with information about who modified it, at what time, for what purpose.
