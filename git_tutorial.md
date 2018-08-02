@@ -201,7 +201,7 @@ The first line of each gives the *hash* of the commit.
 Git uses this hash as a unique identifier for the commit.
 In some other settings, such as on Github, you may see a shortened form of the hash, usually the first 7 digits, used to improve human readability.
 The second line gives the author and email address, and the third line contains the timestamp.
-Below the third line, set off with an indentation, its the commit message written by the author when the commit was created.
+Below the third line, set off with an indentation, is the commit message written by the author when the commit was created.
 You can think of the commit message as a comment field for the commit.
 
 The command `git log` supports a variety of options which allow you to search the commit history and change the presentation of the output.
@@ -236,7 +236,7 @@ The *patch* output tends to be long, so we will not include an example here, but
 In the patch output, lines beginning with a `-` were removed in this commit, and lines beginning with `+`were added in this commit.
 Lines which instead begin with a space are included for context.
 
-The `--stat` option present the level of detail intermediate between the plain `git log` and the much more detailed `git log --patch`.
+The `--stat` option presents a level of detail intermediate between the plain `git log` and the much more detailed `git log --patch`.
 It presents information about which files were modified and how many lines were inserted and deleted from each file.
 
 ```
