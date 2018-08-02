@@ -225,6 +225,11 @@ Date:   Mon Jul 16 17:07:07 2018 -0400
 
     formatting fixes
 ```
+
+Note: the option to specify a number of commits is useful in some circumstances (such as if you want to write log info to a file), but you probably will not use it much on a daily basis. 
+By default, `git log` sends its output to a pager, like `less`, and so you can simply navigate through his many commits as you want using the arrow keys. 
+To exit the pager, just type `q`.
+
 If we actually want to see the changes that occurred in each commit, we can use the option `-p` or `--patch`.
 Note the following example combines `-p` with the option `-1` explained above to limit the size of the output.
 
