@@ -292,11 +292,90 @@ Date:   Mon Jul 16 17:03:49 2018 -0400
 
 # Contributing code to a project
 
+So far this tutorial has covered only have to view and search the contents and history of repositories, but somebody has to actually create that repository content.
+In this section, you will create a small repository from scratch, make a few commits, and backup your work to github.
+
 ## Creating a repository from scratch
+On disk, a git repository consists of a directory and all of its subdirectories (recursively).
+You can create a repository in an empty directory or and one which already contains code.
+This makes it easy to add version control to an existing project.
+Note that git will not provide backup and version control for your files simply because you create a repository in the directory. 
+You must also add those files to a commit!
+
+For this tutorial, we will create a repository in an empty directory.
+You can place this directory anywhere you like, as long as it is not inside of another git repository.
+For simplicity, the commands given in this section will assume that you have placed your new repository directory in your home directory , but you can adjust file paths if you choose to place your repository elsewhere.
+
+Navigate to home, create a new directory, navigate into that directory, and create a repository:
+
+```
+cd ~
+mkdir hello-git
+cd hello-git
+git init
+```
+
+The command `git init` creates a hidden directory `.git` which marks this directory as a git repository and stores history information (among other things).
+So, we now have a git repository with no files and no history.
+
 
 ## Making your first commit
 
+Now, let's create a file.
+The details of your file are not important for this tutorial, but here's my file `hello.py`.
+
+```
+print("Hello, Git!")
+```
+
+If you are still getting familiar with using a commandline text editor, now is a good opportunity to practice.
+You will also need to use your text editor to write commit messages.
+
+For example, using nano:
+``` 
+nano hello.py
+```
+will open the editor with a new (empty) file.
+You can then type the file contents.
+When finished, press CTRL+s to save and then CTRL+x to exit the editor.
+
+You have now created a file, but we have not yet asked git to record the fact that you created a file.
+In order to tell git about this file, we need build a commit containing the file.
+
+Before we build our first commit, we need to understand a little bit about how git manages files and commits.
+There are three primary locations that git uses to build and organize commits: the working directory, the staging area, and the commit history.
+You should think of each locations is containing a snapshot (or set of snapshots) of the status of all tracked files.
+The working directory is the directory as it actually exists on disk.
+As you actually write code, you are changing the content of the working directory.
+The staging area is where you assemble your commits.
+You can think of the staging area as containing a set of changes to files.
+Once you have assembled all of the necessary changes in the staging area, you actually make a commit, at which point git generates a timestamp and a hash used to identify the commit and adds the commit to the history.
+
+We've already made changes to the working directory, but we have not yet added those changes to the staging area.
+We can see this by running `git status`.
+To add our changes to the staging area, run
+``` 
+git add hello.py
+```
+
+Now that we've added a file, we can see the contents of the staging area by again running `git status`.
+Since we don't have any other changes to add, we will go ahead and make a commit.
+Run
+```
+git commit
+```
+Git will open your text editor so that you can write a commit message.
+The commit message should generally be used to summarize the changes that were made in this commit.
+Write a commit message, save the file and exit the editor.
+Git will print some summary information about your commit, such as how many lines were added and removed.
+
+If you want to see your commit, you can run `git log`.
+
+### Some additional options for `git commit`
+
 ## Backing up your work and collaborating on github
+
+## Some notes on adding version control to an existing project
 
 
 
