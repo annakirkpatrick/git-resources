@@ -21,7 +21,7 @@ git version
 If you get the output `git version #.#.#` or similar, then you are good to go.
 Otherwise, if you get a message like `command not found `, you will need to install git.
 Instructions for Windows users are above.
-Mac users can install from a variety of sources, but the official builds can be found on [here](https://git-scm.com/download/mac).
+Mac users can install from a variety of sources, but the official builds can be found [here](https://git-scm.com/download/mac).
 Linux users should install through your package management system.
 
 # Initial git setup
@@ -76,7 +76,7 @@ This repository is public, so all you have to do is navigate to ```https://githu
 
 
 # Optional configuration: SSH keys
-**Note:  you must set up SSH keys in order to use git from inside the School of Math computer network.**
+**Note:  you must set up SSH keys in order to use git with private repositories from inside the School of Math computer network.**
 Whenever you exchange information with github, you must authenticate your identity.
 With the newer versions of git, you can use a https protocol which allows you to authenticate using your github password (which, for Georgia Tech github, is your Georgia Tech password).
 For older versions of git, including the version currently running on School of Math machines, you must instead authenticate using SSH keys.
@@ -141,7 +141,7 @@ When viewing any repository, make sure that you are on the *Code* tab, and look 
 It should be towards the upper right-hand side of your screen.
 When you click this button, a small box appears containing an address along with a button to copy it to your clipboard.
 Note the small blue text that allows you to toggle between SSH and HTTPS addresses.
-(Remember: you must use SSH on School of Math computers.)
+(Remember: you must use SSH on School of Math computers when you want to access private repositories or push to public repositories.)
 
 ## Updating a repository: pull
 Once you have used the `clone` command to create a copy of a repository, git provides an efficient way to update your local copy of the repository to reflect remote changes.
@@ -247,7 +247,7 @@ git log -p -1
 ```
 
 The *patch* output tends to be long, so we will not include an example here, but you should try it in your own repositories.
-In the patch output, lines beginning with a `-` were removed in this commit, and lines beginning with `+`were added in this commit.
+In the patch output, lines beginning with a `-` were removed in this commit, and lines beginning with `+` were added in this commit.
 Lines which instead begin with a space are included for context.
 
 The `--stat` option presents a level of detail intermediate between the plain `git log` and the much more detailed `git log --patch`.
