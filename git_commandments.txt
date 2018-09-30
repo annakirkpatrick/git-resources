@@ -1,0 +1,23 @@
+The Git Commandments
+
+Guidelines for responsible use of git and Github in gtDMMB.
+
+1. Build commits out of related sets of changes. Each commit should be a logical chunk of code implementation or debugging. For example, don't put multiple bug fixes for unrelated bugs in the same commit. If in doubt, split your work into multiple commits.
+
+2. Commit messages are required on all commits and should include, at minimum, a summary of what changes were made and why. Complete sentences are not required, but messages should be complete enough to be understandable by peers working on the same or similar projects. (Git automatically records which files were modified and by whom, so you do not need to record this information again.)
+
+3. If you are writing code, then you should be making commits. If you are working on an experiment with a reasonable probability of failure, then you may want to make commits in a separate branch (so it is easy to discard your work if the experiment fails), but uncommitted code should never be left sitting in your working directory.
+
+4. When you sit down to work, begin by using an appropriate pull or fetch command to download the latest work from your collaborators. This helps to avoid divergence in code that causes difficult merges later. (If you're running into conflicts, consider using branches.)
+
+5. Push your work to the shared Github repository at least once a day. This keeps everyone in sync and makes sure that work is remotely backed up.
+
+6. Any nontrivial code must be committed to a repository. If a suitable repository does not already exist, then make one and share it with others working on the project.
+
+7. Every repository must include a README. At minimum, the README must describe what the repository contains. For repositories containing functional software, the README should specify dependencies required and give instructions for installing and/or compiling and/or executing the software.
+
+8. Every repository should have an appropriate .gitignore file. At minimum, the .gitignore file should contain a specification of any executable or log files generated during the build process. If applicable, it should also contain any data files or directories which are not intended to be synchronized with git.
+
+9. Data and code should be kept separate. Large amounts of data should never be included in a repository. On some projects, it is appropriate to track changes in output by including a small amount of input data and program output in the repository itself. Even in this case, a separate data directory should be used.
+
+10. If you are confused, ask for help! Git can be tricky, but there are team members who can answer your questions and help you develop a workflow that facilitates collaboration.
