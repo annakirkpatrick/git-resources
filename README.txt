@@ -4,4 +4,5 @@ Most of these resources were written by Anna Kirkpatrick, and questions on these
 
 As of 9/29/18, this repository contains:
 git_tutorial – a tutorial on common git commands and workflow, currently work in progress
-git_commandment – a short list of community expectations regarding the use of git and Github in the research group
+git_commandments – a short list of community expectations regarding the use of git and Github in the research group
+slack_notifications_github_enterprise_instructions – instructions for setting up slack integration with repositories hosted on Github Enterprise
