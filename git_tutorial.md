@@ -337,7 +337,7 @@ nano hello.py
 ```
 will open the editor with a new (empty) file.
 You can then type the file contents.
-When finished, press CTRL+s to save and then CTRL+x to exit the editor.
+When finished, press CTRL+w to save and then CTRL+x to exit the editor.
 
 You have now created a file, but we have not yet asked git to record the fact that you created a file.
 In order to tell git about this file, we need build a commit containing the file.
@@ -371,9 +371,123 @@ Git will print some summary information about your commit, such as how many line
 
 If you want to see your commit, you can run `git log`.
 
+## Backing up your work and collaborating on Github
+
+Up to this point, you have created a repository, created a file in that repository, and added your changes as a commit to git's history.
+So far, all of your work has been local.
+That is, you have only made changes to files on your own hard drive.
+Now, we will learn how to upload your new repository to github.
+
+First, we need to make github aware that you have a new repository.
+Open your web browser and navigate to github.gatech.edu.
+If you are not already logged in, do so now.
+
+From your (logged in) homepage on github, find the green button labeled New repository.
+There should be a list of your repositories on the right-hand side of the screen, and the new repository button is located at the top of that list.
+Click on the new repository button.
+
+Github should now present you with a page where you can create your repository.
+The first two fields ask you to give your repository name and description.
+For name, type 'hello-git'.
+The description field is optional and appears only on github.
+It is generally good practice to fill out the description, so I'm going to say 'test repository for learning git'.
+
+Next you are asked to pick whether your repository should be public or private.
+Public repositories are viewable by everyone who has an account on github.gatech.edu.
+(If you are using github.com, then public repositories are viewable to anyone with Internet access.)
+Private repositories are viewable only by you and collaborators that you add.
+For the sake of this educational example, select private.
+
+The final section of the repository creation form asks you to decide whether or not you would like to initialize the repository with the readme and/or a .gitignore file.
+Both of these files are important to have in most repositories, and will be discussed later.
+For the sake of this example, leave the check box asking if you want to create a readme unchecked and leave the .gitignore drop-down box set to None.
+Click the green button at the bottom of the page to create your repository.
+
+The next page gives you quick setup instructions for your new repository.
+We will want the instructions titled "... Or push an existing repository from the command line."
+Following those instructions, return to your terminal and run the following 2 commands, substituting your actual username for [username].
+```
+git remote add origin git@github.gatech.edu:[username]/hello-git.git
+git push -u origin master
+```
+
+Note: the two commands above assume you have configured SSH keys. If you are instead choosing to use HTTPS, the first command will have a different address. Just followed the instructions given to you by Github.
+
+If everything is working correctly, you should be prompted for your SSH key passphrase.
+Git will then print some status information to your terminal.
+Assuming this command completes without errors, you have successfully uploaded your work to Github!
+You can further verify this fact by returning to your web browser and refreshing the page.
+You should now see your file posted on Github.
+
+## Making some more changes
+We've now seen how to create a repository, make an initial commit, and upload the repository to Github.
+All that remains is to make further commits and continue to keep your local repository in sync with the remote copy hosted on Github.
+
+In most cases, keeping your local repository in sync with the remote repository is very simple.
+Just run
+```
+git pull origin master
+```
+before you start work for the day and whenever you need to download the latest work from your colleagues.
+In many cases, the above command can be abbreviated by simply
+```
+git pull
+```
+As long as you are not working with multiple branches, it is safe to just run `git pull`. 
+However, depending on the configuration details of your local repository, the shortened form of the command might not work.
+Discussing those configuration details is beyond the scope of this tutorial, but git does generate intelligent error messages that should point you in the right direction if you want to investigate.
+
+Making and synchronizing further commits is also easy.
+Let's work through two more related examples: adding a readme to your project and editing your existing file 'hello.py'.
+
+We'll start by adding a readme.
+From your terminal, navigate to your repository and create a file 'README.txt' using your commandline text editor.
+The contents of that file really are arbitrary, but mine simply reads
+```
+A test repository for learning about git.
+```
+Add your new file to the staging area by running
+```
+git add README.txt
+```
+Now create a commit by running 
+```
+git commit
+```
+Enter a commit message, and now you've successfully made your second commit!
+
+Now let's look at the process for modifying an existing file.
+With your text editor, open 'hello.py' and add a comment line to the top of that file.
+```
+#Hello World program in my first git repo
+```
+Save the file and exit your text editor.
+Now we will add our changes to the staging area by running
+```
+git add hello.py
+```
+Check that everything looks in order by running
+```
+git status
+```
+You should see that the changes you just made to 'hello.py' are now listed as staged changes.
+That's what we wanted, so let's go ahead and commit.
+```
+git commit
+```
+As before, use your commandline text editor to enter a commit message.
+
+Before pushing your changes to github, optionally run 'git log' to see a record of the commits would you have just made.
+Finally, run
+```
+git push origin master
+```
+to backup your work.
+
+
+
 ### Some additional options for `git commit`
 
-## Backing up your work and collaborating on github
 
 ## Some notes on adding version control to an existing project
 
