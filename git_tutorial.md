@@ -495,7 +495,7 @@ to backup your work.
 
 ### README
 
-###.gitignore
+### `.gitignore`
 
 ### Keeping things organized
 
