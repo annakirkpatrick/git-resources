@@ -373,8 +373,7 @@ If you want to see your commit, you can run `git log`.
 
 ## Backing up your work and collaborating on Github
 
-Up to this point, you have created a repository, created a file in that repository, and added your changes as a commit to git's history.
-So far, all of your work has been local.
+So far, all of your work in this section has been local.
 That is, you have only made changes to files on your own hard drive.
 Now, we will learn how to upload your new repository to github.
 
@@ -388,9 +387,9 @@ Click on the new repository button.
 
 Github should now present you with a page where you can create your repository.
 The first two fields ask you to give your repository name and description.
-For name, type 'hello-git'.
+For name, type `hello-git`.
 The description field is optional and appears only on github.
-It is generally good practice to fill out the description, so I'm going to say 'test repository for learning git'.
+It is generally good practice to fill out the description, so I'm going to say `test repository for learning git`.
 
 Next you are asked to pick whether your repository should be public or private.
 Public repositories are viewable by everyone who has an account on github.gatech.edu.
@@ -404,14 +403,16 @@ For the sake of this example, leave the check box asking if you want to create a
 Click the green button at the bottom of the page to create your repository.
 
 The next page gives you quick setup instructions for your new repository.
-We will want the instructions titled "... Or push an existing repository from the command line."
+We will want the instructions titled `... Or push an existing repository from the command line.`
 Following those instructions, return to your terminal and run the following 2 commands, substituting your actual username for [username].
 ```
 git remote add origin git@github.gatech.edu:[username]/hello-git.git
 git push -u origin master
 ```
 
-Note: the two commands above assume you have configured SSH keys. If you are instead choosing to use HTTPS, the first command will have a different address. Just followed the instructions given to you by Github.
+Note: the two commands above assume you have configured SSH keys. 
+If you are instead choosing to use HTTPS, the first command will have a different address. 
+Just follow the instructions given to you by Github.
 
 If everything is working correctly, you should be prompted for your SSH key passphrase.
 Git will then print some status information to your terminal.
@@ -441,7 +442,7 @@ Making and synchronizing further commits is also easy.
 Let's work through two more related examples: adding a readme to your project and editing your existing file 'hello.py'.
 
 We'll start by adding a readme.
-From your terminal, navigate to your repository and create a file 'README.txt' using your commandline text editor.
+From your terminal, navigate to your repository and create a file `README.txt` using your commandline text editor.
 The contents of that file really are arbitrary, but mine simply reads
 ```
 A test repository for learning about git.
@@ -477,7 +478,7 @@ git commit
 ```
 As before, use your commandline text editor to enter a commit message.
 
-Before pushing your changes to github, optionally run 'git log' to see a record of the commits would you have just made.
+Before pushing your changes to github, optionally run `git log` to see a record of the commits you have just made.
 Finally, run
 ```
 git push origin master
