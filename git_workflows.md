@@ -6,6 +6,10 @@ These instructions also assume that you are working with only one remote and onl
 (If you don't know what those words mean, don't worry.
 If you don't know what these things are, then you probably aren't using multiple!)
 
+All of the commands given should be executed in a bash command line environment.
+On Mac or Linux, this is just your system terminal.
+If you are using Windows, I would recommend using git bash, which is available as part of [git for Windows](https://gitforwindows.org/).
+
 # Contributing code to a collatorative project
 
 ## When you sit down to start work
