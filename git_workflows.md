@@ -23,14 +23,15 @@ In the vast majority of cases, this command will succeed without incident, and g
 (Or your repository was already up to date in which case no merge was necessary.)
 If git informs you that a manual merge is required and you are not comfortable with the merge process, please seek advice from a more experienced team member.
 
-##After each hour (approximately) of work and when you finish any major tasks
+## After each hour (approximately) of work and when you finish any major tasks
 
 1. Review the changes that you have made.
 ```
 git status
 ```
 
-2. Add files where you have made changes to the staging area. (These will mainly be source code and/or documentation in plain text or markup formats.)
+2. Add files where you have made changes to the staging area. 
+(These will mainly be source code and/or documentation in plain text or markup formats.)
 
 ```
 git add file1
@@ -43,9 +44,10 @@ git add file3
 ```
 git status
 ```
-With the possible exception of one or two temp files which you are actively using for experimentation in your current work session, all new or modified files containing code or documentation should be included in your commit.
+All new or modified files containing code or documentation should be included in your commit.
+(You may exclude temporary files which you are using for experimentation in your current work session only.)
 Automatically generated output (compiled code, log files) should not be included in commits and can be excluded from the output of `git status` using the `.gitignore` file. 
-(See the tutorial or ask a more experienced team member for more information on `.gitignore.)
+(See the tutorial or ask a more experienced team member for more information on `.gitignore.`)
 Large amounts of data should never be included in repositories, but it is sometimes appropriate to include small amounts of data as a way of tracking the evolution of program output.
 This should be discussed with your collaborators, and any data files you do not wish to include in the repository can be similarly excluded with `.gitignore`.)
 
@@ -61,8 +63,9 @@ git commit
 Write a message that describes what changes you have made and why.
 (You do not need to record which files were changed, your own name, or any timestamp information, as git saves this automatically.)
 
-6. Optionally, if you know that your collaborators are also currently writing code, go ahead and push your changes to Github.
+6. Optionally, if you know that your collaborators are also currently writing code, go ahead and update both your local repository and the remote copy on Github.
 ```
+git pull
 git push
 ```
 
@@ -72,7 +75,7 @@ git push
 git status
 ```
 
-2. Add files where you have made changes to the staging area. (These will mainly be source code and/or documentation in plain text or markup formats.)
+2. Add files where you have made changes to the staging area. 
 
 ```
 git add file1
@@ -144,11 +147,14 @@ Any GUI-based text editor is fine as long as you save your file in the appropria
 5. Edit the plain text file and begin writing your report.
 
 6. Copy any relevant supporting files into this week's directory.
+
 For example, this might include a PDF of a paper in progress, data plots in PDF format, raw data tables as plain text, PDF of more complex data or information prepared in LaTeX.
 It is generally not necessary to duplicate information that is already included in another repository; you can just provide a link in your report.
 
 7. (Optional step that allows you to work on your report on multiple computers.
 Also has the advantage of creating a remote backup of your work.)
+Make a commit and push to Github.
+
 Add your report to the staging area.
 ```
 git add report_yyyy-mm-dd.txt
@@ -173,7 +179,7 @@ git push
 ```
 
 ## As you are working on your report throughout the week
-1. 1. If you are working on multiple computers, pull down your latest updates.
+1. If you are working on multiple computers, pull down your latest updates.
 ```
 git pull
 ```
@@ -183,8 +189,9 @@ git pull
 3. Add any new or updated supporting files (e.g. data plots, PDFs of papers) to this week's directory.
 If you are updating a supporting file, be sure that you overwrite the original file.
 
-4. (Optional step that allows you to work on your report on multiple computers.
-Also has the advantage of creating a remote backup of your work.)
+4. (Optional step that allows you to work on your report on multiple computers.)
+Make a commit and push to Github.
+
 Add your report to the staging area.
 ```
 git add report_yyyy-mm-dd.txt
@@ -201,7 +208,6 @@ Make a commit.
 git commit
 ```
 Use your text editor to write a commit message.
-Since you are not yet finished with work for the week, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
 
 Push to Github.
 ```
@@ -224,7 +230,7 @@ git add file2
 ```
 git status
 ```
-Look at this output and verified that all of the relevant files are listed as changes added to commit. 
+Look at this output and verify that all of the relevant files are listed as changes added to commit. 
 Make sure that you do not have any untracked files.
 (These will be listed as untracked in that the output of `git status` if you have any.)
 
