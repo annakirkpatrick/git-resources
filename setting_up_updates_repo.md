@@ -16,6 +16,7 @@ Open a terminal and type
 git version
 ```
 If you get the output `git version #.#.#` or similar, then you are good to go.
+
 Otherwise, if you get a message like `command not found `, you will need to install git.
 Windows users should install [git for Windows](https://gitforwindows.org/).
 Mac users can install from a variety of sources, but the official builds can be found [here](https://git-scm.com/download/mac).
@@ -41,7 +42,7 @@ git config --global core.editor nano
 Open your web browser and navigate to `github.gatech.edu`.
 If you are not already logged in, you will need to login with your Georgia Tech username and password.
 (Yes, the login prompt looks different than the single sign-on prompts you are used to seeing. It's still legitimate; I promise.)
-After logging in, github will probably offer you tutorial (which you can ignore/close).
+After logging in, github will probably offer you a tutorial (which you can ignore/close).
 
 # 4. Set up an ssh key
 
@@ -51,19 +52,27 @@ ssh-keygen
 ```
 The program will prompt you to enter a file in which to save your new key.
 Press enter to accept the default location and file name.
+
 It will then prompt you twice for a passphrase.
 This is a password that you will need to type each time you want to use your SSH key.
 You can choose to leave the passphrase blank, but do know that this presents a small security risk, as anyone who gains access to your hard drive could then access anything protected by your SSH keys.
 
 Return to your web browser and navigate to `github.gatech.edu`. 
+
 Click on the small profile picture icon in the upper right-hand corner of the screen.
+
 In that menu, click on *Settings*.
+
 In the left hand menu, click on *SSH and GPG keys*.
+
 Then, click the green *New SSH key* button.
 
 You should now be looking at a form which asks you for a title and a key.
+
 For the title, you want to enter a brief description of the computer associated with the key (e.g. "School of Math Network", "Personal MacBook", "Ubuntu Desktop").
+
 For the key, open the file `~./ssh/id_rsa.pub` with a text editor, copy the entire contents of the file, and paste into the key field.
+
 Click "Add SSH key", and you're done.
 (Github may prompt you for your password to confirm this new key actually belongs to you.)
 
@@ -91,15 +100,16 @@ Click *Create repository*.
 If you just finished the previous step, then you should currently be looking at your new repository.
 If not, return to the homepage of github.gatech.edu and then click on your repository name in the right hand column.
 
-You should currently be looking at the *Code* tab.
 Click on the *Settings* tab.
-From the left-hand menu, click *Collaborators*.
-You should see a message telling you that the repository does not yet have any collaborators.
-Github presents you with a form to search for users to add as collaborators.
 
+From the left-hand menu, click *Collaborators*.
+
+You should see a message telling you that the repository does not yet have any collaborators.
+Github should also present you with a form to search for users to add as collaborators.
 Click on this text field.
+
 Enter the name or username of your supervisor(s).
-Selected the correct person from the list of matches and then click *Add collaborator*.
+Select the correct person from the list of matches and then click *Add collaborator*.
 
 It is generally easier to search by username.
 Christine Heitsch has username "cheitsch3".
@@ -120,6 +130,7 @@ Find the green button labeled *Clone or download* on the right-hand side of your
 A small box should appear underneath the green button.
 If that box says *Clone with HTTPS*, then click the small blue text *Use SSH*.
 You should now be looking at a box titled *Clone with SSH*.
+
 Click the copy-to-clipboard button to copy the address provided.
 
 Return to your terminal and run
@@ -151,7 +162,7 @@ You should see a file containing only one line, namely
 ```
 You can delete this line using the arrow keys to move your cursor and the backspace or delete keys to delete characters.
 Replace this line with a description of this repository.
-You may borrow mine, if you want.
+You may borrow mine, if you want:
 ```
 This repository stores [your name]'s weekly research progress reports.
 Each directory is dated yyyy-mm-dd with the anticipated meeting date.
@@ -164,7 +175,9 @@ Some documents summarizing progress before this point are also included.
 ```
 
 When you have finished typing your README, press control + X to exit nano.
+
 Nano will ask you if you would like to "Save modified buffer."
+
 Press Y to save your changes and then press enter to keep the same file name.
 Nano will close and you will be returned to your terminal.
 
@@ -181,6 +194,7 @@ Type
 create README
 ```
 and then press control + X to exit nano.
+
 As before, press Y to save your changes and enter to accept the default filename.
 Git will display a message summarizing your changes.
 
