@@ -1,3 +1,16 @@
+# Table of Contents
+
+* [About this document](#about-this-document)
+* [Contributing code to a collatorative project](#contributing-code-to-a-collatorative-project) 
+  * [When you sit down to start work](#when-you-sit-down-to-start-work)
+  * [After each hour of work and when you finish any major tasks](#after-each-hour-of-work-and-when-you-finish-any-major-tasks)
+  * [When you finish work for the day](#when-you-finish-work-for-the-day)
+* [Maintaining a log of weekly research progress updates](#maintaining-a-log-of-weekly-research-progress-updates)
+  * [When you begin working on your log for the week](#when-you-begin-working-on-your-log-for-the-week)
+  * [As you are working on your report throughout the week](#as-you-are-working-on-your-report-throughout-the-week)
+  * [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week)
+  
+# About this document
 This document gives instructions for a few simple workflows using git and github.
 In all cases, these instructions assume that you have already set up git on your computer and that you have already created or cloned a repository and have correctly set it up to interface with github.
 For instructions on setting up git on a new computer or creating or cloning a repository, please see the full [git tutorial](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_tutorial.md).
@@ -27,7 +40,9 @@ In the vast majority of cases, this command will succeed without incident, and g
 (Or your repository was already up to date in which case no merge was necessary.)
 If git informs you that a manual merge is required and you are not comfortable with the merge process, please seek advice from a more experienced team member.
 
-## After each hour (approximately) of work and when you finish any major tasks
+## After each hour of work and when you finish any major tasks
+You don't need to follow these steps precisely every hour.
+The idea is just to document your progress regularly.
 
 1. Review the changes that you have made.
 ```
