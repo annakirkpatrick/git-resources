@@ -112,4 +112,134 @@ When running `git pull`, there is a small chance that git will tell you that you
 (This can happen when you and a colleague both edit the same part of the same file.)
 If you are not comfortable with the manual merge process, please seek assistance from a more experienced team member.
 
+# Maintaining a log of weekly research progress updates
+## When you begin working on your log for the week
 
+1. Navigate to your repository
+
+```
+cd path/to/repository
+```
+
+2. Pull down changes from Github (not required if you work on only one computer)
+```
+git pull
+```
+
+3. Make a new directory for this week's updates
+```
+mkdir yyyy-mm-dd
+```
+
+4. Make a new text file for this week's report
+```
+cd yyyy-mm-dd
+nano report_yyyy-mm-dd.txt
+```
+You can use any text editor of your choosing. 
+Nano is just an example.
+(You do not necessarily need to use a command line text editor.
+Any GUI-based text editor is fine as long as you save your file in the appropriate location.)
+
+5. Edit the plain text file and begin writing your report.
+
+6. Copy any relevant supporting files into this week's directory.
+For example, this might include a PDF of a paper in progress, data plots in PDF format, raw data tables as plain text, PDF of more complex data or information prepared in LaTeX.
+It is generally not necessary to duplicate information that is already included in another repository; you can just provide a link in your report.
+
+7. (Optional step that allows you to work on your report on multiple computers.
+Also has the advantage of creating a remote backup of your work.)
+Add your report to the staging area.
+```
+git add report_yyyy-mm-dd.txt
+```
+Then add your supporting files (if any) to the staging area.
+```
+git add file1
+git add file2
+```
+If you are adding more than a couple files, you can run `git status` to check that you have added all of them.
+
+Make a commit.
+```
+git commit
+```
+Use your text editor to write a commit message.
+Since you are not yet finished with work for the week, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
+
+Push to Github.
+```
+git push
+```
+
+## As you are working on your report throughout the week
+1. 1. If you are working on multiple computers, pull down your latest updates.
+```
+git pull
+```
+
+2. Edit report_yyyy-mm-dd.txt using the text editor of your choice.
+
+3. Add any new or updated supporting files (e.g. data plots, PDFs of papers) to this week's directory.
+If you are updating a supporting file, be sure that you overwrite the original file.
+
+4. (Optional step that allows you to work on your report on multiple computers.
+Also has the advantage of creating a remote backup of your work.)
+Add your report to the staging area.
+```
+git add report_yyyy-mm-dd.txt
+```
+Then add your supporting files (if any) to the staging area.
+```
+git add file1
+git add file2
+```
+If you are adding more than a couple files, you can run `git status` to check that you have added all of them.
+
+Make a commit.
+```
+git commit
+```
+Use your text editor to write a commit message.
+Since you are not yet finished with work for the week, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
+
+Push to Github.
+```
+git push
+```
+
+## When you have finished your report for the week
+1. Add your report to the staging area.
+```
+git add report_yyyy-mm-dd.txt
+```
+
+2. Add any supporting files to the staging area.
+```
+git add file1
+git add file2
+```
+
+3. Verify that all of the relevant files have been added to the staging area.
+```
+git status
+```
+Look at this output and verified that all of the relevant files are listed as changes added to commit. 
+Make sure that you do not have any untracked files.
+(These will be listed as untracked in that the output of `git status` if you have any.)
+
+4. Make a commit.
+```
+git commit
+```
+
+5. Git will open your text editor.
+Write a message to accompany this commit.
+In this context, a brief message is generally appropriate.
+For example, "final report for [date]" should be fine.
+Exit your text editor, saving the file.
+
+6. Push to Github.
+```
+git push
+```
