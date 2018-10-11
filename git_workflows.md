@@ -50,10 +50,12 @@ git status
 ```
 All new or modified files containing code or documentation should be included in your commit.
 (You may exclude temporary files which you are using for experimentation in your current work session only.)
+
 Automatically generated output (compiled code, log files) should not be included in commits and can be excluded from the output of `git status` using the `.gitignore` file. 
 (See the tutorial or ask a more experienced team member for more information on `.gitignore.`)
+
 Large amounts of data should never be included in repositories, but it is sometimes appropriate to include small amounts of data as a way of tracking the evolution of program output.
-This should be discussed with your collaborators, and any data files you do not wish to include in the repository can be similarly excluded with `.gitignore`.)
+This should be discussed with your collaborators, and any data files you do not wish to include in the repository can be similarly excluded with `.gitignore`.
 
 If your commit looks good, then continue to the next step.
 If you need to make changes, use `git add` and `git rm` to add and remove files as needed.
