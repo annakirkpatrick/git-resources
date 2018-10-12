@@ -91,37 +91,9 @@ git push
 ```
 
 ## When you finish work for the day
-1. Review the changes that you have made.
-```
-git status
-```
+1. Complete steps under heading [After each hour of work and when you finish any major tasks](#after-each-hour-of-work-and-when-you-finish-any-major-tasks).
 
-2. Add files where you have made changes to the staging area. 
-
-```
-git add file1
-git add file2
-git add file3
-```
-
-3. Take a look at your staged commit to make sure that you have not forgotten any important files.
-
-```
-git status
-```
-If your commit looks good, then continue to the next step.
-(See previous section for guidelines for what to include in commits.)
-If you need to make changes, use `git add` and `git rm` to add and remove files as needed.
-
-4. Make a commit to record your work.
-```
-git commit
-```
-
-5. Git should open your text editor so that you can enter a commit message.
-Write a message that describes what changes you have made and why.
-
-6. Push your changes to Github.
+2. Push your changes to Github.
 ```
 git push
 ```
@@ -174,25 +146,8 @@ It is generally not necessary to duplicate information that is already included 
 
 7. (Optional step that allows you to work on your report on multiple computers.
 Also has the advantage of creating a remote backup of your work.)
-Make a commit and push to Github.
-
-Add your report to the staging area.
-```
-git add report_yyyy-mm-dd.txt
-```
-Then add your supporting files (if any) to the staging area.
-```
-git add file1
-git add file2
-```
-If you are adding more than a couple files, you can run `git status` to check that you have added all of them.
-
-Make a commit.
-```
-git commit
-```
-Use your text editor to write a commit message.
-Since you are not yet finished with work for the week, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
+Follow the directions in section [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week) below.
+When you write your commit message, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
 
 Push to Github.
 ```
@@ -210,30 +165,7 @@ git pull
 3. Add any new or updated supporting files (e.g. data plots, PDFs of papers) to this week's directory.
 If you are updating a supporting file, be sure that you overwrite the original file.
 
-4. (Optional step that allows you to work on your report on multiple computers.)
-Make a commit and push to Github.
-
-Add your report to the staging area.
-```
-git add report_yyyy-mm-dd.txt
-```
-Then add your supporting files (if any) to the staging area.
-```
-git add file1
-git add file2
-```
-If you are adding more than a couple files, you can run `git status` to check that you have added all of them.
-
-Make a commit.
-```
-git commit
-```
-Use your text editor to write a commit message.
-
-Push to Github.
-```
-git push
-```
+4. If working on multiple computers, follow the directions in section [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week) below, modifying your commit message as in step 7 of the previous section.
 
 ## When you have finished your report for the week
 1. Add your report to the staging area.
