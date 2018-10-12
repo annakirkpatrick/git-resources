@@ -137,22 +137,7 @@ Nano is just an example.
 (You do not necessarily need to use a command line text editor.
 Any GUI-based text editor is fine as long as you save your file in the appropriate location.)
 
-5. Edit the plain text file and begin writing your report.
-
-6. Copy any relevant supporting files into this week's directory.
-
-For example, this might include a PDF of a paper in progress, data plots in PDF format, raw data tables as plain text, PDF of more complex data or information prepared in LaTeX.
-It is generally not necessary to duplicate information that is already included in another repository; you can just provide a link in your report.
-
-7. (Optional step that allows you to work on your report on multiple computers.
-Also has the advantage of creating a remote backup of your work.)
-Follow the directions in section [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week) below.
-When you write your commit message, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
-
-Push to Github.
-```
-git push
-```
+5. If you are ready to start writing, proceed to section [As you are working on your report throughout the week](#as-you-are-working-on-your-report-throughout-the-week) below, omitting step 1.
 
 ## As you are working on your report throughout the week
 1. If you are working on multiple computers, pull down your latest updates.
@@ -162,10 +147,16 @@ git pull
 
 2. Edit report_yyyy-mm-dd.txt using the text editor of your choice.
 
-3. Add any new or updated supporting files (e.g. data plots, PDFs of papers) to this week's directory.
+3. Add any new or updated supporting files to this week's directory.
 If you are updating a supporting file, be sure that you overwrite the original file.
 
-4. If working on multiple computers, follow the directions in section [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week) below, modifying your commit message as in step 7 of the previous section.
+Supporting files might include a PDF of a paper in progress, data plots in PDF format, raw data tables as plain text, PDF of more complex data or information prepared in LaTeX.
+It is generally not necessary to duplicate information that is already included in another repository; you can just provide a link in your report.
+
+4. (Optional step that allows you to work on your report on multiple computers.
+Also has the advantage of creating a remote backup of your work.)
+Follow the directions in section [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week) below.
+When you write your commit message, it is good practice to include a phrase like "work in progress" or "rough draft" so that others seeing the automatically generated notification for your commit will know that you are not yet finished.
 
 ## When you have finished your report for the week
 1. Add your report to the staging area.
