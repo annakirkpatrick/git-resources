@@ -197,7 +197,7 @@ git push
 
 # Setting up git on a new computer
 
-1.Check that git is installed
+1. Check that git is installed
 
 ```
 git version
