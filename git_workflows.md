@@ -9,11 +9,12 @@
   * [When you begin working on your log for the week](#when-you-begin-working-on-your-log-for-the-week)
   * [As you are working on your report throughout the week](#as-you-are-working-on-your-report-throughout-the-week)
   * [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week)
+* [Setting up git on a new computer](#setting-up-git-on-a-new-computer)
   
 # About this document
 This document gives instructions for a few simple workflows using git and github.
 In all cases, these instructions assume that you have already set up git on your computer and that you have already created or cloned a repository and have correctly set it up to interface with github.
-For instructions on setting up git on a new computer or creating or cloning a repository, please see the full [git tutorial](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_tutorial.md).
+For for detailed information, please see the full [git tutorial](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_tutorial.md).
 
 These instructions also assume that you are working with only one remote and only one branch.
 (If you don't know what those words mean, don't worry.
@@ -193,3 +194,27 @@ Exit your text editor, saving the file.
 ```
 git push
 ```
+
+# Setting up git on a new computer
+
+1.Check that git is installed
+
+```
+git version
+```
+
+2. Configure git with your name, email, and preferred text editor.
+
+```
+git config --global user.name "First Last"
+git config --global user.email "FLast#@gatech.edu"
+git config --global core.editor nano
+```
+
+3. Set up an ssh key, if needed or desired.
+```
+ssh-keygen
+```
+Press enter to accept default file names, then enter your new passphrase twice.
+
+Copy the contents of `~./ssh/id_rsa.pub` into Github.
