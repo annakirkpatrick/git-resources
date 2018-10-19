@@ -1,6 +1,6 @@
 This tutorial is intended to provide an introduction to the basic features of git and github.
 A few notes are also included specifically for users working inside of the Georgia Tech School of Math computer network. 
-If you have already worked through this tutorial, or have used git in the past, then you may prefer [git workflows] (https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_workflows.md) as a reference or refresher.
+If you have already worked through this tutorial, or have used git in the past, then you may prefer [git workflows](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_workflows.md) as a reference or refresher.
 
 # A note to Windows users
 You will need to begin by installing [Git for Windows](gitforwindows.org). 
@@ -79,7 +79,7 @@ This is a password that you will need to type each time you want to use your SSH
 You can choose to leave the passphrase blank, but do know that this presents a small security risk, as anyone who gains access to your hard drive could then access anything protected by your SSH keys.
 
 When the program finishes, you will have a pair of files. 
-By default, these are `~/.ssh/id_rsa` (your private key) and `~./ssh/id_rsa.pub` (your public key).
+By default, these are `~/.ssh/id_rsa` (your private key) and `~/.ssh/id_rsa.pub` (your public key).
 
 You now need to provide your public key to github so that you can use your private key to authenticate.
 Open web browser and navigate to `github.gatech.edu`. 
@@ -178,7 +178,7 @@ View your commit in the commit history by running
 git log
 ```
 
-## Backing up your work and collaborating on Github
+## Backing up your work on Github
 
 So far, all of your work in this section has been local.
 That is, you have only made changes to files on your own hard drive.
@@ -292,9 +292,11 @@ to backup your work.
 
 
 # Getting copies of existing repositories: clone and pull
-## Copying a repository: clone
+
 In the previous section, we learned how to make a repository from scratch.
 In this section, we will learn how to download and update an existing repository.
+
+## Copying a repository: clone
 
 The command `git clone` creates a local copy of the repository you specify and sets up appropriate *remotes* so that you can easily download updates to the repository and make contributions to the repository (if you have permission).
 
