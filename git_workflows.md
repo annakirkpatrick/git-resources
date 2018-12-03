@@ -10,10 +10,12 @@
   * [As you are working on your report throughout the week](#as-you-are-working-on-your-report-throughout-the-week)
   * [When you have finished your report for the week](#when-you-have-finished-your-report-for-the-week)
 * [Setting up git on a new computer](#setting-up-git-on-a-new-computer)
-  
+* [Cloning a new repository](#cloning-a-new-repository) 
+
+ 
 # About this document
 This document gives instructions for a few simple workflows using git and github.
-In all cases, these instructions assume that you have already set up git on your computer and that you have already created or cloned a repository and have correctly set it up to interface with github.
+With a few obvious exceptions, these instructions assume that you have already set up git on your computer and that you have already created or cloned a repository and have correctly set it up to interface with github.
 For for detailed information, please see the full [git tutorial](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_tutorial.md).
 
 These instructions also assume that you are working with only one remote and only one branch.
@@ -218,3 +220,28 @@ ssh-keygen
 Press enter to accept default file names, then enter your new passphrase twice.
 
 Copy the contents of `~./ssh/id_rsa.pub` into Github.
+
+
+# Cloning a new repository
+If you are working with an existing repository for the first time, do the following:
+
+1. In your terminal, navigate to the location where you wish to store the repository.
+For example,
+```
+cd ~/collaborative_projects
+```
+
+2. Find the repository address in Github.
+Click on the "Code" tab of the repository you want to download.
+Find the green button labeled "Clone or download," and click on it to obtain the SSH or HTTPS address for the repository.
+Copy this address.
+(The little clipboard button to the right of the address will copy the address to your clipboard automatically.) 
+Generally speaking, you can use either address depending on personal preference, but you will want to use SSH with in the School of Math network.
+
+3. Clone the repository.
+
+```
+git clone repository_address
+```
+
+You can now proceed to the [instructions for contributing to a collaborative repository](#contributing-code-to-a-collaborative-project).
