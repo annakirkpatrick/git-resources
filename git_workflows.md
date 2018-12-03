@@ -1,7 +1,7 @@
 # Table of Contents
 
 * [About this document](#about-this-document)
-* [Contributing code to a collatorative project](#contributing-code-to-a-collatorative-project) 
+* [Contributing code to a collaborative project](#contributing-code-to-a-collaborative-project) 
   * [When you sit down to start work](#when-you-sit-down-to-start-work)
   * [After each hour of work and when you finish any major tasks](#after-each-hour-of-work-and-when-you-finish-any-major-tasks)
   * [When you finish work for the day](#when-you-finish-work-for-the-day)
@@ -26,7 +26,7 @@ All of the commands given should be executed in a bash command line environment.
 On Mac or Linux, this is just your system terminal.
 If you are using Windows, I would recommend using git bash, which is available as part of [git for Windows](https://gitforwindows.org/).
 
-# Contributing code to a collatorative project
+# Contributing code to a collaborative project
 
 ## When you sit down to start work
 
