@@ -5,6 +5,7 @@ import os
 import sys
 from datetime import datetime
 import time #for time.sleep()
+import re #regular expressions
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -39,7 +40,12 @@ if __name__ == '__main__':
 
     print("git log --author=\"{0}\" --pretty=format:\"%ad %an : %s\" --since=\"{1}\" >> {2}".format(author_name, time_since, file_name))
     os.system("git log --author=\"{0}\" --pretty=format:\"%ad %an : %s\" --since=\"{1}\" >> {2}".format(author_name, time_since, file_name))
-    
+
+    #set up some regular expressions for parsing
+    min_only = re.compile('\d+[mM]')
+    hour_only = re.compile('\d+[hH]')
+    both_hour_min = re.compile('\d+[hH]\d+[mM]')
+
     #read newly-written log
     #include delay because /projects is slow
     time.sleep(1)
@@ -47,7 +53,9 @@ if __name__ == '__main__':
         for line in log_file:
             if line.startswith("#"): #header comment lines we wrote
                 continue
-           
+            words = line.split() #split on whitespace
+            time_string = words[len(words) - 1] #grab last chunk of each log entry
+            #if a time tracking entry exists, it should be here
 
 
 
