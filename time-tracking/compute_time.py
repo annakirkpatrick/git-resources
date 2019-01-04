@@ -38,7 +38,6 @@ if __name__ == '__main__':
     log_file.write(file_header)
     log_file.close()
 
-    print("git log --author=\"{0}\" --pretty=format:\"%ad %an : %s\" --since=\"{1}\" >> {2}".format(author_name, time_since, file_name))
     os.system("git log --author=\"{0}\" --pretty=format:\"%ad %an : %s\" --since=\"{1}\" >> {2}".format(author_name, time_since, file_name))
 
     #set up some regular expressions for parsing
@@ -63,13 +62,7 @@ if __name__ == '__main__':
             time_string = words[len(words) - 1] #grab last chunk of each log entry
             #if a time tracking entry exists, it should be here
             try:
-                if not min_only.match(time_string) is None:
-                    mins_str = time_string[:-1]
-                    mins=int(mins_str)
-                elif not hour_only.match(time_string) is None:
-                    hours_str = time_string[:-1]
-                    mins=int(hours_str)*60
-                elif not both_hour_min.match(time_string) is None:
+                if not both_hour_min.match(time_string) is None:
                     h_pos = 0
                     try:
                         h_pos = time_string.index("h")
@@ -78,10 +71,18 @@ if __name__ == '__main__':
                     hours_str = time_string[:h_pos]
                     mins_str = time_string[h_pos+1:-1]
                     mins = 60*int(hours_str) + int(mins_str)
+                elif not min_only.match(time_string) is None:
+                    mins_str = time_string[:-1]
+                    mins=int(mins_str)
+                elif not hour_only.match(time_string) is None:
+                    hours_str = time_string[:-1]
+                    mins=int(hours_str)*60
                 else: #no time record for this commit
                     print("Info: No time record found for commit:\n" + line)
-            except ValueError:
+            except ValueError as e:
                 print("Error: failed to parse commit, no time will be added")
+                print(e)
+                print(line)
             if mins > 120: #shouldn't happen, so print a warning
                 print("Warning: {0} minutes logged on commit:\n{1}".format(mins, line))
             total_mins+=mins
