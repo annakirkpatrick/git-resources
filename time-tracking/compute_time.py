@@ -4,6 +4,7 @@ import argparse
 import os
 import sys
 from datetime import datetime
+import time #for time.sleep()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -27,7 +28,7 @@ if __name__ == '__main__':
         os.chdir(repo_path)
 
     #save off today's date and time
-    current_date = datetime.now().strftime('%Y-%m-%d_%H:%M:%S') 
+    current_date = datetime.now().strftime('%Y-%m-%d_%H-%M-%S') #use '-' rather than ':' in timestamp for Windows file naming rules
 
     #save time log to disk
     file_header = "# Time tracking log \n# Repo: " + repo_path + "\n# Commit author: " + author_name + "\n# Since: " + time_since + "\n# Current date: " + current_date + "\n"
@@ -39,6 +40,14 @@ if __name__ == '__main__':
     print("git log --author=\"{0}\" --pretty=format:\"%ad %an : %s\" --since=\"{1}\" >> {2}".format(author_name, time_since, file_name))
     os.system("git log --author=\"{0}\" --pretty=format:\"%ad %an : %s\" --since=\"{1}\" >> {2}".format(author_name, time_since, file_name))
     
+    #read newly-written log
+    #include delay because /projects is slow
+    time.sleep(1)
+    with open(file_name, 'r') as log_file:
+        for line in log_file:
+            if line.startswith("#"): #header comment lines we wrote
+                continue
+           
 
 
 
