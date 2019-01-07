@@ -1,6 +1,6 @@
 # Overview
 The script compute_time.py allows students and mentors to easily track time spent on code development projects through git commit messages.
-This document describes script installation, provides instructions for students on properly tracking their time in commit messages, and provides instructions on script use along with some suggestions for automation.
+This document describes script installation, provides instructions for students on properly tracking their time in commit messages, and provides instructions on running the script.
 
 # Script download, installation, and first-use configuration
 
@@ -98,7 +98,7 @@ A few additional expectations:
 2. Changes should be pushed to Github at least once a day, more frequently if you are actively collaborating on code. This allows mentors to track your progress and creates a backup of your work.
 3. Git should be properly configured with the author name property set on each computer where code development is completed. Each student should use the same author name consistently across all computers so that all of his or her commits may be easily located. (See the main [git tutorial](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_tutorial.md), or the [workflow for setting up git on a new computer](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_workflows.md#setting-up-git-on-a-new-computer), for more details.)
 
-##If you mess up
+## If you mess up
 
 If you make a mistake in your commit message (e.g., forgetting to include your time tracking, or simply making a typo) and you have *not* yet pushed to Github, you can use `git commit --amend` to revise your commit message.
 
@@ -109,7 +109,7 @@ git commit --amend
 ```
 Then enter your revised commit message, and save as usual to complete the commit.
 
-Note that using the `amend` option is a form of rewriting history.
+Note that using the `--amend` option is a form of rewriting history.
 Please do not rewrite history on any commits that have already been pushed to Github, as this can cause significant issues for your collaborators.
 If you notice a mistake on a commit that has already been pushed, simply make a note in your weekly report so that your mentors can properly account for your time.
 
