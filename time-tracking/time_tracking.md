@@ -96,6 +96,7 @@ Instead, time spent on tasks described in the weekly update should be noted in t
 A few additional expectations:
 1. The time spent on a single commit should not exceed two hours. If a task takes more than two hours, break it into subtasks and/or stop at the two-hour mark to make a commit and document your progress to this point.
 2. Changes should be pushed to Github at least once a day, more frequently if you are actively collaborating on code. This allows mentors to track your progress and creates a backup of your work.
+3. Git should be properly configured with the author name property set on each computer where code development is completed. Each student should use the same author name consistently across all computers so that all of his or her commits may be easily located. (See the main [git tutorial](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_tutorial.md), or the [workflow for setting up git on a new computer](https://github.gatech.edu/akirkpatrick3/git-resources/blob/master/git_workflows.md#setting-up-git-on-a-new-computer), for more details.)
 
 ##If you mess up
 
