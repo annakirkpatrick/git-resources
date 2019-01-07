@@ -71,3 +71,82 @@ Optionally, remove the `tlog` file just generated before proceeding.
 ```
 rm *.tlog
 ```
+
+# Recording your time
+
+## Technical instructions
+
+The time spent working on a commit is recorded at the end of the commit message.
+After the normal commit message describing changes made, type [num hours]h[num mins]m (e.g. `1h25m` for one hour, 25 minutes.)
+Make sure this string is separated from the rest of your commit message by at least one white space character (e.g. space, tab, newline) and that it occurs at the very end of your commit message.
+Here is a sample complete commit message.
+```
+fix bug causing segfault when opening second file 1h10m
+```
+
+It is also acceptable to omit either the hours or minutes section of the string. 
+For example, `10m` and `1h` are both valid strings.
+
+## Expectations for use in gtDMMB
+
+All students writing code with gtDMMB are expected to organize all code in git repositories and use this system to track their time.
+Time tracking does not need to be used with weekly updates repositories.
+Instead, time spent on tasks described in the weekly update should be noted in that update.
+
+A few additional expectations:
+1. The time spent on a single commit should not exceed two hours. If a task takes more than two hours, break it into subtasks and/or stop at the two-hour mark to make a commit and document your progress to this point.
+2. Changes should be pushed to Github at least once a day, more frequently if you are actively collaborating on code. This allows mentors to track your progress and creates a backup of your work.
+
+##If you mess up
+
+If you make a mistake in your commit message (e.g., forgetting to include your time tracking, or simply making a typo) and you have *not* yet pushed to Github, you can use `git commit --amend` to revise your commit message.
+
+The `--amend` option has many uses, but in this case you want to use it to change the commit message.
+This is easy; just run
+```
+git commit --amend
+```
+Then enter your revised commit message, and save as usual to complete the commit.
+
+Note that using the `amend` option is a form of rewriting history.
+Please do not rewrite history on any commits that have already been pushed to Github, as this can cause significant issues for your collaborators.
+If you notice a mistake on a commit that has already been pushed, simply make a note in your weekly report so that your mentors can properly account for your time.
+
+# Computing Time Spent
+
+## Script arguments
+The script has 2 required positional arguments and one optional argument.
+Namely:
+- The *author name* is the first positional argument. It will almost always be enclosed in quotes because it will contain a space.
+- The time *since* over which to search for commits is the second positional argument. This can be specified either as an absolute date and (optionally) time, e.g. "January 2, 2019" or as a relative date (examples below).
+- The optional argument *repository path* allows you to specify a repository. If not given, the script will use your current working directory.
+
+## Examples
+We will use the 'git-resources' repository as an example.
+
+From inside the repository, compute Anna's time contributions from the past week:
+```
+cd git-resources
+compute_git_time "Anna Kirkpatrick" 1.week
+```
+Or since the beginning of the year:
+```
+compute_git_time "Anna Kirkpatrick" "Jan 1, 2019"
+```
+
+Or, from the home directory, compute Anna's time spent on this project in the last two weeks:
+```
+cd ~
+compute_git_time --repository_path ~/gtDMMB/Code/git-resources/ "Anna Kirkpatrick" 2.weeks
+```
+Or, from the last 3 days
+```
+compute_git_time --repository_path ~/gtDMMB/Code/git-resources/ "Anna Kirkpatrick" 3.days
+```
+
+## Time log files
+Each time you run the script, a time stamped file with extension `tlog` is created in your repository.
+These collect the commits which contributed to the total time output by the program and can be used by students and mentors to further investigate where time was spent.
+If you don't need this information, you may simply delete the files.
+
+It is helpful to include `*.tlog` in your `.gitignore` file to avoid accidentally including one of these time log files in a commit.
