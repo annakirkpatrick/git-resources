@@ -43,7 +43,7 @@ Otherwise, we need to create ~/bin and add it to PATH.
 ```
 cd ~
 mkdir bin
-echo -e "export PATH=$(PATH):~/bin" >> ~/.bashrc
+echo -e "export PATH=$PATH:~/bin" >> ~/.bashrc
 ```
 In order for the changes we just made to PATH to take effect, you need to close and reopen your terminal emulator (if using a graphical Linux or Mac desktop environment) or log out of the machine and log back in (if using SSH).
 
